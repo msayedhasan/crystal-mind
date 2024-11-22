@@ -1,0 +1,14 @@
+<app-header (openSide)="drawer.toggle()"></app-header>
+
+<main>
+  <mat-drawer-container class="example-container" autosize backdrop="true">
+    <mat-drawer #drawer class="example-sidenav" mode="over">
+      <app-side-menu (closeSide)="drawer.toggle()"></app-side-menu>
+    </mat-drawer>
+
+    <app-breadcrumb></app-breadcrumb>
+    <router-outlet> </router-outlet>
+
+    <app-footer></app-footer>
+  </mat-drawer-container>
+</main>

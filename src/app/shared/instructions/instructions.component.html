@@ -1,0 +1,21 @@
+<div class="modal-body" style="direction: rtl;">
+    <div id="print-container">
+        <div class="grid-center-noGutter">
+            <app-print-header
+            class="col-24 grid-spaceBetween-noGutter"
+            [name]="name"
+            [phone]="phone"
+            [age]="age"
+            [gender]="gender"
+          ></app-print-header>
+
+            <div class="grid-center" style="font-size: 20px;margin-top: 20px;color: #000;width: 100%;"><b>التعليمات</b></div>
+            <ng-content style="text-align: justify; direction: rtl; margin-top: 20px;color: #000;"></ng-content>
+        </div>
+    </div>
+    <div class="grid-center-noGutter">
+        <button type="button" class="btn col-5_sm-7 btn cancel round" (click)="hideModal()">
+            ابدأ الاختبار
+        </button>
+    </div>
+</div>

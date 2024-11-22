@@ -1,0 +1,41 @@
+.card {
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px !important;
+  border-radius: 10px;
+
+  margin: 10px;
+  .card-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .title {
+    font-size: 1.05rem;
+    font-weight: bold;
+  }
+  .head {
+    font-weight: bold;
+    color: #0c425d;
+    margin-bottom: 10px;
+  }
+  .content {
+    margin-bottom: 5px;
+
+    .best {
+      color: green;
+    }
+    .worst {
+      color: red;
+    }
+  }
+
+  .filter {
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid rgb(0, 44, 132);
+    margin: 0 5px;
+  }
+}

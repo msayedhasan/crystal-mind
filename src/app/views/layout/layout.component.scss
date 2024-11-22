@@ -1,0 +1,24 @@
+@import "src/scss/abstracts/variables";
+
+app-header {
+  height : $header-height;
+  flex   : 0 0 $header-height;
+  display: flex;
+}
+
+main {
+  height           : calc(100% - #{$header-height});
+}
+
+mat-drawer-container {
+  height          : 100%;
+  background-color: $main-background-color;
+
+  mat-drawer {
+    width           : $sideMenu-width;
+    background-color: $color1;
+    color           : white;
+    position        : fixed;
+    top             : $header-height;
+  }
+}

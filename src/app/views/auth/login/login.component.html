@@ -1,0 +1,43 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple"></ngx-spinner>
+<div class="grid-center-noGutter page_container">
+  <img src="assets/images/auth.jpg" style="" alt="">
+  <div class="overlay"></div>
+  <div class="col-8_xlg-12_md-16_sm-22_xs-24">
+    <div class="grid-center-noGutter form-container">
+      <div class="col-24 grid-center-noGutter">
+        <div class="col-24 grid-center-noGutter">
+          <a class="logo" routerLink="">
+            <img src="assets/images/logo.png" alt="" />
+          </a>
+        </div>
+        <!-- <h1><b>Login</b></h1> -->
+      </div>
+      <div class="grid-center-noGutter col-24">
+        <div class="col-24 grid-center-noGutter">
+          <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <div class="grid-column-center-noGutter">
+              <label for="name">Username</label>
+              <input formControlName="name" type="text" max="11" id="name" name="name" placeholder="Enter your Username">
+              <!-- Password Field -->
+              <label for="password">Password</label>
+              <input formControlName="password" type="password" id="password" name="password"
+                placeholder="Enter your Password" required>
+
+              <div class="grid-center-noGutter" style="margin: 30px 0;">
+                <button type="submit" class="col-24 btn color1">
+                  تسجيل الدخول
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="col-24 grid-spaceAround-middle-noGutter last register">
+          <p style="margin: 0;">لا تمتلك حساب؟</p>
+          <a routerLink="/auth/register">
+            انشاء حساب جديد
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+.card {
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px !important;
+  border-radius: 10px;
+
+  margin: 10px;
+  position: relative;
+}
+.filter {
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid rgb(0, 44, 132);
+  margin: 0 5px;
+}
+.title {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+th,
+td {
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+tr.example-detail-row {
+  height: 0;
+  transition: all 0.3s;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}

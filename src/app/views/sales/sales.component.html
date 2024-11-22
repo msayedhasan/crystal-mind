@@ -1,0 +1,165 @@
+<div class="grid-center-noGutter">
+  <div class="col-22 grid-center-noGutter">
+    <div class="col-24 grid-spaceBetween-noGutter">
+      <div class="grid-spaceBetween-noGutter col-24">
+        <div class="grid-spaceBetween-noGutter col-24">
+          <div class="col-6 grid-column-spaceBetween-noGutter">
+            <div class="card grid-column-center-noGutter">
+              <p class="title" style="text-align: center; margin-bottom: 20px">
+                Filter
+              </p>
+              <div
+                class="grid-spaceBetween-noGutter"
+                style="margin-bottom: 20px"
+              >
+                <span class="head">Business</span>
+                <span class="filter">Crystal-Mind</span>
+              </div>
+              <div
+                class="grid-spaceBetween-noGutter"
+              >
+                <span class="head">Date</span>
+                <span>
+                  <span class="filter">1-11-2024</span>
+                  <span class="filter">30-11-2024</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="card grid-column-middle-center-noGutter">
+              <p class="title">Total Sales</p>
+              <span class="content" style="font-size: 1.2rem">495000</span>
+            </div>
+          </div>
+
+          <div class="grid-column-spaceBetween-center-noGutter col-6">
+            <div class="card grid-column-middle-center-noGutter">
+              <div class="content">
+                <span class="head"> Best Day : </span>
+                <span class="best">15000 L.E (29-11)</span>
+              </div>
+              <div class="content">
+                <span class="head"> Worst Day : </span>
+                <span class="worst">10000 L.E (22-11)</span>
+              </div>
+            </div>
+            <div class="card grid-column-middle-center-noGutter">
+              <div class="content">
+                <span class="head"> Best Day/Week : </span>
+                <span class="best">Thursday</span>
+              </div>
+              <div class="content">
+                <span class="head"> Worst Day/Week : </span>
+                <span class="worst">Tuesday</span>
+              </div>
+            </div>
+            <div class="card grid-column-middle-center-noGutter">
+              <div class="content grid-spaceBetween-noGutter" style="width: 100%">
+                <span class=""> Average Checks : </span>
+                <span class="">2500 L.E.</span>
+              </div>
+              <div class="content grid-spaceBetween-noGutter" style="width: 100%">
+                <span class=""> Avg. Sales/Customer : </span>
+                <span class="">500 L.E.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="height: 325px">
+            <p class="card-title">Sales</p>
+            <app-line-chart
+              [view]="line_view"
+              [scheme]="line_colorScheme"
+              [legend]="line_legend"
+              [showXAxisLabel]="line_showXAxisLabel"
+              [showYAxisLabel]="line_showYAxisLabel"
+              [xAxis]="line_xAxis"
+              [yAxis]="line_yAxis"
+              [xAxisLabel]="line_xAxisLabel"
+              [yAxisLabel]="line_yAxisLabel"
+              [timeline]="line_timeline"
+              [multi]="line_multi"
+            ></app-line-chart>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <p class="card-title">Categories</p>
+        <app-pie-chart
+          [view]="pie_categories_view"
+          [colorScheme]="pie_categories_colorScheme"
+          [single]="pie_categories_single"
+          [gradient]="pie_categories_gradient"
+          [showLegend]="pie_categories_showLegend"
+        ></app-pie-chart>
+      </div>
+      
+      <div class="card">
+        <p class="card-title">Products</p>
+        <app-horizontal-bar
+          [view]="horizontal_view"
+          [colorScheme]="horizontal_colorScheme"
+          [single]="horizontal_single"
+          [gradient]="horizontal_gradient"
+          [showXAxis]="horizontal_showXAxis"
+          [showYAxis]="horizontal_showYAxis"
+          [showLegend]="horizontal_showLegend"
+          [showXAxisLabel]="horizontal_showXAxisLabel"
+          [showYAxisLabel]="horizontal_showYAxisLabel"
+          [xAxisLabel]="horizontal_xAxisLabel"
+          [yAxisLabel]="horizontal_yAxisLabel"
+        ></app-horizontal-bar>
+      </div>
+
+      <div class="card">
+        <p class="card-title">Order Type</p>
+        <app-pie-chart
+          [view]="pie_orderingType_view"
+          [colorScheme]="pie_orderingType_colorScheme"
+          [single]="pie_orderingType_single"
+          [gradient]="pie_orderingType_gradient"
+          [showLegend]="pie_orderingType_showLegend"
+        ></app-pie-chart>
+      </div>
+
+
+      <div class="grid-spaceBetween-noGutter col-24">
+        <div class="card col-5 grid-column-middle-center-noGutter">
+          <p class="title">Best Selling</p>
+          <div class="grid-column-noGutter">
+            <span class="content">Pizza : 5000 L.E.</span>
+            <span class="content">Coffee : 3000 L.E.</span>
+            <span class="content">Pizza : 2500 L.E.</span>
+          </div>
+        </div>
+        <div class="card col-5 grid-column-middle-center-noGutter">
+          <p class="title">Worst Selling</p>
+          <div class="grid-column-noGutter">
+            <span class="content">Pizza : 500 L.E.</span>
+            <span class="content">Coffee : 250 L.E.</span>
+            <span class="content">Pizza : 150 L.E.</span>
+          </div>
+        </div>
+        <div class="card col-5 grid-column-middle-center-noGutter">
+          <p class="title">Best Selling (Quantity)</p>
+          <div class="grid-column-noGutter">
+            <span class="content">Tea : 100</span>
+            <span class="content">Cheese Cake : 80</span>
+            <span class="content">Water : 150</span>
+          </div>
+        </div>
+        <div class="card col-5 grid-column-middle-center-noGutter">
+          <p class="title">Worst Selling (Quantity)</p>
+          <div class="grid-column-noGutter">
+            <span class="content">Burger : 10</span>
+            <span class="content">Pie : 8</span>
+            <span class="content">Donut : 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

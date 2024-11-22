@@ -1,0 +1,112 @@
+@import "/src/scss/abstracts/variables";
+header {
+  height: inherit;
+  border-bottom: 1px solid $border;
+  position: fixed;
+  width: 100%;
+  z-index: 1020;
+  background-color: $header-background-color;
+  .item {
+    margin: 0 20px 0 15px;
+    font-size: 16px;
+  }
+}
+
+.logo {
+  height: 80%;
+
+  img {
+    height: inherit;
+  }
+}
+
+.menu {
+  cursor: pointer;
+}
+
+i {
+  color: $bill-color;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0 10px;
+
+  &:hover {
+    color: $bill-hover-color;
+  }
+}
+
+.notify {
+  position: relative;
+
+  .heartbit {
+    position: absolute;
+    top: -9px;
+    right: 3px;
+    height: 25px;
+    width: 25px;
+    z-index: 10;
+    border: 5px solid #0c425d;
+    border-radius: 70px;
+    -webkit-animation: heartbit 2.5s ease-out infinite;
+  }
+
+  .notification {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    color: $color1;
+    background: $gray2;
+    padding: 0 6px;
+    border-radius: 50%;
+  }
+
+  @keyframes heartbit {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+}
+
+.avatar {
+  // background-image: url(../../../assets/images/avatar.jpg);
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+  background-size: cover;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+
+  button {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+  li.head {
+    text-align: center;
+    background-color: $profile-menu-color;
+    padding: 10px 0;
+    border-bottom: 1px solid $border;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

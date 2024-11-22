@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'crystal-mind';
+  supportLanguages = ['en', 'ar'];
+  // constructor(
+  //   private translateService: TranslateService,
+  //   private authService: AuthService
+  // ) {
+  //   this.translateService.addLangs(this.supportLanguages);
+  //   this.translateService.setDefaultLang('en');
+
+  //   const browserLang = this.translateService.getBrowserLang();
+  //   this.translateService.use(browserLang);
+
+  //   this.authService.GetUserData();
+  // }
 }

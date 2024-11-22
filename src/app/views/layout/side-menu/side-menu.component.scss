@@ -1,0 +1,38 @@
+@import "src/scss/abstracts/variables";
+
+:host ::ng-deep mat-expansion-panel {
+  background: transparent;
+  color: $gray2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) !important;
+
+  .mat-expansion-panel-content {
+    background: #0d394f;
+    .mat-expansion-panel-body {
+      padding: 0;
+    }
+  }
+
+  .mat-expansion-indicator::after {
+    color: $color2;
+  }
+}
+
+ul {
+  list-style: none;
+
+  li.child {
+    &:hover {
+      background-color: $color3;
+    }
+
+    a {
+      padding: 15px 5px;
+      width: 100%;
+      color: $white;
+
+      i {
+        margin: 0 5px;
+      }
+    }
+  }
+}

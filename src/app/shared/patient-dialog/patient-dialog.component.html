@@ -1,0 +1,53 @@
+<div class="modal-body">
+    <div class="patient-form">
+      <div class="grid-column-center-noGutter form" [formGroup]="form">
+        <label for="name">اسم المريض</label>
+        <input
+          formControlName="name"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="اسم المريض"
+          (input)="onTextInput($event)"
+          required
+        />
+
+        <label for="phone">الرقم</label>
+        <input
+          formControlName="phone"
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="ادخل الرقم"
+          (input)="onNumberInput($event)"
+          maxlength="11"
+        />
+
+        <label for="age">العمر</label>
+        <input
+          formControlName="age"
+          type="number"
+          id="age"
+          name="age"
+          placeholder="ادخل العمر"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="2"        />
+
+        <label for="gender">النوع</label>
+        <select matNativeControl formControlName="gender" ngDefaultControl>
+          <option value="male">ولد</option>
+          <option value="female">بنت</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid-center-noGutter" style="margin-top: 20px">
+      <button
+        type="button"
+        class="btn col-5_sm-7 start-test color1 round"
+        style="margin: 0 10px"
+        (click)="updatePatient(form.value)"
+      >
+        تم
+      </button>
+    </div>
+  </div>

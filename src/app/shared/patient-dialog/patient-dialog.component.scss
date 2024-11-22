@@ -1,0 +1,49 @@
+.patient-form {
+    direction: rtl;
+  
+    label {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="phone"],
+    select {
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      direction: rtl;
+    }
+  
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    input[type="phone"]:focus,
+    select:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  
+    select {
+      option {
+        padding: 10px;
+      }
+  
+      mat-select-arrow {
+        color: #3f51b5; // Custom color for the dropdown arrow
+      }
+    }
+  
+    mat-option {
+      &.mat-selected {
+        background-color: #3f51b5 !important; // Custom background color for selected options
+        color: white;
+      }
+    }
+  }
+  

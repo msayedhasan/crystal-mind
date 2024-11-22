@@ -1,0 +1,31 @@
+<div class="modal-body">
+  <div id="print-container" style="letter-spacing: normal">
+    <div class="grid-center-noGutter printed">
+      <app-print-header
+        class="col-24 grid-spaceBetween-noGutter"
+        [name]="name"
+        [phone]="phone"
+        [age]="age"
+        [gender]="gender"
+      ></app-print-header>
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div class="grid-center-noGutter" style="margin-top: 20px">
+    <button
+      type="button"
+      class="btn col-5_sm-5_xs-6 color1 round"
+      style="margin-right: 10px"
+      (click)="exportToPDF()"
+    >
+      طباعة
+    </button>
+    <button
+      type="button"
+      class="btn col-5_sm-5_xs-6 btn cancel round"
+      (click)="hideModal()"
+    >
+      الغاء
+    </button>
+  </div>
+</div>

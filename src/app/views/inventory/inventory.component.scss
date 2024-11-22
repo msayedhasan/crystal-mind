@@ -1,0 +1,19 @@
+.card {
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px !important;
+    border-radius: 10px;
+
+    margin: 10px; 
+    position: relative;
+}
+table{
+  box-shadow: none; 
+
+}
+th , td {
+  vertical-align: middle;
+}

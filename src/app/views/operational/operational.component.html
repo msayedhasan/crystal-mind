@@ -1,0 +1,144 @@
+<div class="grid-center-noGutter">
+  <div class="grid-spaceBetween-noGutter col-22">
+    <div class="col-24 grid-spaceBetween-noGutter">
+      <div class="col-6 grid-column-spaceBetween-noGutter">
+        <div class="card grid-column-center-noGutter">
+          <p class="title" style="text-align: center; margin-bottom: 20px">
+            Filter
+          </p>
+          <div class="grid-spaceBetween-noGutter" style="margin-bottom: 30px">
+            <span class="head">Business</span>
+            <span class="filter">Crystal-Mind</span>
+          </div>
+          <div class="grid-spaceBetween-noGutter">
+            <span class="head">Date</span>
+            <span>
+              <span class="filter">1-11-2024</span>
+              <span class="filter">30-11-2024</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="card grid-column-middle-center-noGutter">
+          <p class="title">Top Order</p>
+          <span class="content" style="font-size: 1.2rem">Order 1</span>
+        </div>
+      </div>
+
+      <div class="card" style="height: 310px">
+        <h2>Costs / Month</h2>
+        <app-line-chart
+          [view]="cost_view"
+          [scheme]="cost_colorScheme"
+          [legend]="cost_legend"
+          [showXAxisLabel]="cost_showXAxisLabel"
+          [showYAxisLabel]="cost_showYAxisLabel"
+          [xAxis]="cost_xAxis"
+          [yAxis]="cost_yAxis"
+          [xAxisLabel]="cost_xAxisLabel"
+          [yAxisLabel]="cost_yAxisLabel"
+          [timeline]="cost_timeline"
+          [multi]="cost_multi"
+        ></app-line-chart>
+      </div>
+    </div>
+
+    <div class="col-24 grid-spaceBetween-noGutter">
+      <div class="col card">
+        <h2>Orders Details</h2>
+
+        <table
+          mat-table
+          [dataSource]="dataSource"
+          multiTemplateDataRows
+          class="mat-elevation-z8"
+          matSort
+        >
+          <!-- Define Columns -->
+          <ng-container
+            matColumnDef="{{ column }}"
+            *ngFor="let column of displayedColumns"
+          >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              {{ column }}
+            </th>
+            <td mat-cell *matCellDef="let element" (click)="toggleRow(element)">
+              <span>{{ element[column] }}</span>
+            </td>
+          </ng-container>
+
+          <!-- Expanded Detail Row -->
+          <ng-container matColumnDef="expandedDetail">
+            <td
+              mat-cell
+              *matCellDef="let row"
+              [attr.colspan]="displayedColumns.length"
+            >
+              <div *ngIf="isExpanded(row)" class="grid-middle-noGutter">
+                <p><strong>Details:</strong></p>
+                <span style="width: 30px"></span>
+                <div class="grid-column-noGutter">
+                  <p *ngFor="let item of row.details">
+                    {{ item.Order }} : {{ item.cost }}
+                  </p>
+                </div>
+              </div>
+            </td>
+          </ng-container>
+
+          <!-- Table Header and Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+          <!-- Add expanded detail row after each main row -->
+          <tr
+            mat-row
+            *matRowDef="let row; columns: ['expandedDetail']"
+            class="example-detail-row"
+          ></tr>
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons
+        ></mat-paginator>
+      </div>
+      <div class="grid-column-spaceBetween-noGutter">
+        <div class="card">
+          <p class="title">Waiters</p>
+          <app-vertical-bar
+            [view]="waiters_view"
+            [colorScheme]="waiters_colorScheme"
+            [single]="waiters_single"
+            [gradient]="waiters_gradient"
+            [showXAxis]="waiters_showXAxis"
+            [showYAxis]="waiters_showYAxis"
+            [showLegend]="waiters_showLegend"
+            [showXAxisLabel]="waiters_showXAxisLabel"
+            [showYAxisLabel]="waiters_showYAxisLabel"
+            [xAxisLabel]="waiters_xAxisLabel"
+            [yAxisLabel]="waiters_yAxisLabel"
+          >
+          </app-vertical-bar>
+        </div>
+        <div class="card">
+          <p class="title">Cashiers</p>
+          <app-vertical-bar
+            [view]="cashiers_view"
+            [colorScheme]="cashiers_colorScheme"
+            [single]="cashiers_single"
+            [gradient]="cashiers_gradient"
+            [showXAxis]="cashiers_showXAxis"
+            [showYAxis]="cashiers_showYAxis"
+            [showLegend]="cashiers_showLegend"
+            [showXAxisLabel]="cashiers_showXAxisLabel"
+            [showYAxisLabel]="cashiers_showYAxisLabel"
+            [xAxisLabel]="cashiers_xAxisLabel"
+            [yAxisLabel]="cashiers_yAxisLabel"
+          >
+          </app-vertical-bar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

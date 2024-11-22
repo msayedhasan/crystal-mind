@@ -1,0 +1,39 @@
+<ul>
+  <li style="padding: 15px 12px; color: #a8d2be">
+    <a>Menu</a>
+  </li>
+  <li *ngFor="let item of items">
+    <ng-container *ngIf="item.isParent == 'y'">
+      <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header style="color: #a8d2be">
+            {{ item.name }}
+          </mat-expansion-panel-header>
+          <ul>
+            <li
+              (click)="closeMenu()"
+              class="child"
+              *ngFor="let item of item.children"
+            >
+              <a class="grid-middle-noGutter" routerLink="{{ item.route }}">
+                <i class="material-icons">{{ item.icon }}</i>
+                {{ item.name  }}
+              </a>
+            </li>
+          </ul>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ng-container>
+
+    <ng-container *ngIf="item.isParent == 'n'">
+      <ul>
+        <li (click)="closeMenu()" class="child">
+          <a class="grid-middle-noGutter" routerLink="{{ item.route }}">
+            <i class="material-icons">{{ item.icon }}</i>
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </ng-container>
+  </li>
+</ul>

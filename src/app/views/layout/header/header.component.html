@@ -1,0 +1,115 @@
+<header class="grid-middle-spaceBetween-noGutter">
+  <div class="grid-middle-noGutter" style="height: inherit">
+    <div class="menu" (click)="openMenu()" [ngClass]="menu ? 'open' : ''">
+      <i class="material-icons">menu</i>
+    </div>
+
+    <div class="logo">
+      <a routerLink="" style="height: 45px">
+        <img src="assets/images/logo.png" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <div class="grid-middle-noGutter" style="height: inherit">
+    <div class="item">
+      <a (click)="changeLang()" class="grid-middle-noGutter">
+        <!-- <a routerLink=""> -->
+        <span class="language-icon"></span><span>{{ "lang" }}</span>
+      </a>
+    </div>
+    <ng-container *ngIf="isAuthenticated">
+      <a class="item col dropdown-item grid-middle-noGutter" (click)="logout()">
+        <i class="material-icons">exit_to_app</i>{{ "logout" }}
+      </a>
+    </ng-container>
+  </div>
+  <!-- <div class="col-middle grid-right-noGutter" style="height: inherit;">
+    <div class="notify btn-group" dropdown>
+      <button
+        dropdownToggle
+        id="button-animated"
+        type="button"
+        aria-controls="dropdown-animated"
+        class="dropdown-toggle"
+      >
+        <i class="material-icons">notifications</i>
+        <span class="notification">5</span><span class="heartbit"></span>
+      </button>
+      <ul
+        id="dropdown-animated"
+        *dropdownMenu
+        class="dropdown-menu dropdown-menu-right"
+        role="menu"
+        aria-labelledby="button-animated"
+      >
+        <li
+          style="
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px 0;
+            border-bottom: 1px solid #f2f2f2;
+          "
+        >
+          Notifications
+        </li>
+        <li role="menuitem">
+          <a class="dropdown-item grid-middle-noGutter" routerLink="/mail">
+            <i class="material-icons">notifications_active</i>New message
+          </a>
+        </li>
+        <li role="menuitem">
+          <a class="dropdown-item grid-middle-noGutter" routerLink="/mail">
+            <i class="material-icons">notifications_active</i>New Branch
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <ng-container *ngIf="!isAuthenticated">
+      <a routerLink="/auth/login" class="item">
+        <span>login</span>
+      </a>
+    </ng-container>
+
+    <ng-container *ngIf="isAuthenticated">
+      <div class="avatar btn-group" dropdown>
+        <button
+          dropdownToggle
+          id="button-animated"
+          type="button"
+          aria-controls="dropdown-animated"
+          class="dropdown-toggle"
+        >
+          <img [src]="" alt="" />
+        </button>
+        <ul
+          id="dropdown-animated"
+          *dropdownMenu
+          class="dropdown-menu dropdown-menu-right"
+          role="menu"
+          aria-labelledby="button-animated"
+        >
+          <li class="head">
+            Profile
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item grid-middle-noGutter" routerLink="/profile">
+              <i class="material-icons">account_circle</i> Profile
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item grid-middle-noGutter" routerLink="/mail">
+              <i class="material-icons">email</i>Mail
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item grid-middle-noGutter" (click)="logout()">
+              <i class="material-icons">exit_to_app</i>Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </div> -->
+</header>

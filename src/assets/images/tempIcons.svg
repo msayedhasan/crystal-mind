@@ -1,0 +1,23 @@
+<svg id="Layer_1" data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.48 227.88">
+    <defs>
+        <style>.cls-1,.cls-3,.cls-4,.cls-6,.cls-7,.cls-8{fill:none;stroke-linecap:round;stroke-miterlimit:10;}.cls-1,.cls-7{stroke:#a7d3bf;}.cls-1,.cls-3,.cls-4,.cls-6{stroke-width:3px;}.cls-2{fill:#a7d3bf;}.cls-3,.cls-8{stroke:#0e425e;}.cls-4{stroke:#a8d1bd;}.cls-5{fill:#a8d1bd;}.cls-6{stroke:#0f425d;}.cls-7,.cls-8{stroke-width:4px;}</style>
+    </defs>
+    <title>BO Login Page_</title>
+    <path class="cls-1" d="M15.37,50.86A27.14,27.14,0,0,1,45.68,17.53"/>
+    <path class="cls-1" d="M41.71,18.12v0Z"/>
+    <line class="cls-1" x1="14.6" y1="45.25" x2="68.83" y2="45.25"/>
+    <path class="cls-1" d="M21.8,25.94s16,12.41,40.09.43"/>
+    <path class="cls-1" d="M61.75,63.08s-16-12.41-40.09-.43"/>
+    <path class="cls-1" d="M41.71,71.6s28.56-25.52.43-53.48"/>
+    <path class="cls-1" d="M41.71,18.12S13.15,43.64,41.27,71.6"/>
+    <circle class="cls-2" cx="51.19" cy="19.44" r="2.04"/>
+    <path class="cls-3" d="M17.86,57.4A27.12,27.12,0,1,0,56.6,21.81"/>
+    <path class="cls-4" d="M73.06,110.08V96.28H12.65a.4.4,0,0,0-.23.74l27.19,17.25a4.81,4.81,0,0,0,5.1,0L71.94,97.22"/>
+    <circle class="cls-5" cx="73.06" cy="114.69" r="1.56"/>
+    <path class="cls-6" d="M12.23,102.82V125.3s-.07,2.88,2.73,2.88h55.3a2.81,2.81,0,0,0,2.8-2.88c.08-2.88,0-6.22,0-6.22"/>
+    <path class="cls-7" d="M23.06,174.76V160.5s0-4.25,3.55-4.25H56.06s4.29,0,4.29,5.69v28.83"/>
+    <path class="cls-8" d="M60.39,204.33V216.1s-.93,4.26-3.55,4.26H27.36s-4.3-.25-4.3-4V182.29"/>
+    <circle class="cls-2" cx="60.3" cy="197.72" r="1.94"/>
+    <circle class="cls-2" cx="42.18" cy="210.4" r="2.96"/>
+</svg>

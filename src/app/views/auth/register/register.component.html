@@ -1,0 +1,50 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple"></ngx-spinner>
+<div class="grid-center-noGutter page_container">
+  <img src="assets/images/auth.jpg" style="" alt="">
+  <div class="overlay"></div>
+  <div class="col-8_xlg-12_md-16_sm-22_xs-24">
+    <div class="grid-center-noGutter form-container">
+      <div class="col-24 grid-center-noGutter">
+        <div class="col-24 grid-center-noGutter">
+          <a class="logo" routerLink="">
+            <img src="assets/images/logo-transparent.png" alt="" />
+          </a>
+        </div>
+        <h1>انشاء حساب جديد</h1>
+      </div>
+      <div class="grid-center-noGutter col-24">
+        <div class="grid-column-middle col-24">
+          <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <div class="col-24 grid-column-center-noGutter">
+
+              <label for="phone">الاسم</label>
+              <input formControlName="name" type="text" id="name" name="name" aria-live="" placeholder="ادخل اسمك"
+                required>
+
+              <label for="phone">رقم الموبايل</label>
+              <input formControlName="phone" type="tel" id="phone" name="phone" aria-live=""
+                placeholder="ادخل رقم الموبايل" inputmode="numeric" pattern="[0-9]{10}" maxlength="11" required>
+
+              <label for="password">كلمة المرور</label>
+              <input formControlName="password" type="password" id="password" name="password"
+                placeholder="ادخل كلمة المرور" required>
+            </div>
+
+            <button class="btn btn-primary  color1" type="submit" style="margin-top: 30px;">
+              انشاء حساب
+            </button>
+          </form>
+          <div class="grid-center-noGutter">
+            <a routerLink="" class="col-24 btn color2">
+              الصفحة الرئيسية
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-24 grid-spaceAround-noGutter member last register">
+        <p style="margin: 0;">تمتلك حساب؟</p>
+        <a [routerLink]="['/auth/login']" style="margin: 0 15px;">تسجيل الدخول</a>
+      </div>
+    </div>
+  </div>
+</div>

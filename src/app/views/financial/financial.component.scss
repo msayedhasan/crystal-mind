@@ -1,0 +1,26 @@
+@import "../sales/sales.component.scss";
+.card {
+    position: relative;
+}
+::ng-deep app-stacked-vertical {
+    ul.legend-labels {
+        background: none !important;
+    }
+}
+::ng-deep app-pie-grid {
+  g.pie-grid-item {
+    &:last-child {
+      display: none;
+    }
+    &:first-child {
+      width: 200%;
+    }
+  }
+}
+table{
+    box-shadow: none; 
+  
+  }
+  th , td {
+    vertical-align: middle;
+  }
